@@ -4,12 +4,12 @@
 Repository ini berisi materi pembelajaran Data Science yang disusun secara sistematis dan terstruktur. Tutorial ini ditujukan untuk siapa saja yang ingin memulai perjalanan mereka di bidang Data Science, dari pemula hingga tingkat menengah.
 
 ## Daftar Isi
-1. [Introduction to Data Sains](Introduction%20to%20Data%20Sains/) - Pengenalan dasar tentang Data Science
-2. [Python for Data Sains](Python%20for%20Data%20Sains/) - Fundamental Python untuk Data Science
-3. [Machine Learning](Machine%20Learning/) - Konsep dan implementasi Machine Learning
+1. [Introduction to Data Sains](Introduction%20to%20Data%20Sains/README.md) - Pengenalan dasar tentang Data Science
+2. [Python for Data Sains](Python%20for%20Data%20Sains/README.md) - Fundamental Python untuk Data Science
+3. [Machine Learning](Machine%20Learning/README.md) - Konsep dan implementasi Machine Learning
    - Computer Vision
    - Time Series
-
+4. [Deep Learning](Deep%20Learning/README.md) - Konsep dan Implementasi Deep Learning
 ## Prasyarat
 - Dasar pemrograman
 - Matematika dasar
