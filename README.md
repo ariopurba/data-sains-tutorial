@@ -5,11 +5,13 @@ Repository ini berisi materi pembelajaran Data Science yang disusun secara siste
 
 ## Daftar Isi
 1. [Introduction to Data Sains](Introduction%20to%20Data%20Sains/README.md) - Pengenalan dasar tentang Data Science
-2. [Python for Data Sains](Python%20for%20Data%20Sains/README.md) - Fundamental Python untuk Data Science
-3. [Machine Learning](Machine%20Learning/README.md) - Konsep dan implementasi Machine Learning
+2. [Python for Data Sains](Python%20for%20Data%20Sains/README.md) - Fundamental Python untuk Data Science.
+3. [Statistik] - Dasar Statistik dalam data sains.
+4. [Machine Learning](Machine%20Learning/README.md) - Konsep dan implementasi Machine Learning
    - Computer Vision
    - Time Series
-4. [Deep Learning](Deep%20Learning/README.md) - Konsep dan Implementasi Deep Learning
+6. [Deep Learning](Deep%20Learning/README.md) - Konsep dan Implementasi Deep Learning
+7. [NLP] - Konsep dan implementasi dari Natural Language Processing.
 ## Prasyarat
 - Dasar pemrograman
 - Matematika dasar
