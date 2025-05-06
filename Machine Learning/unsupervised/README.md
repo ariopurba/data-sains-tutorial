@@ -39,17 +39,17 @@ Mengelompokkan data ke dalam $k$ cluster dengan meminimalkan variansi dalam clus
 
 #### **Rumus Matematis**:  
 1. **Fungsi Objektif (Inertia)**:  
-$$
+$
 J = \sum_{i=1}^{k} \sum_{x \in C_i} ||x - \mu_i||^2
-$$  
+$  
 - $C_i$: Cluster ke-$i$.  
-- $\mu_i$: Pusat cluster (centroid) ke-$i$.  
+- $\mu_i$: Pusat cluster (centroid) ke- $i$.  
 - $||x - \mu_i||$: Jarak Euclidean antara titik $x$ dan centroid $\mu_i$.  
 
 2. **Jarak Euclidean**:  
-$$
+$
 d(x, \mu_i) = \sqrt{\sum_{j=1}^{n} (x_j - \mu_{ij})^2}
-$$  
+$  
 
 ---
 
