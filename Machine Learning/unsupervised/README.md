@@ -35,21 +35,21 @@ Teknik ML yang menemukan pola tersembunyi dalam data **tanpa label/target**. Ber
 
 ### **2. Algoritma K-Means**  
 #### **Tujuan**:  
-Mengelompokkan data ke dalam **k cluster** dengan meminimalkan variansi dalam cluster.  
+Mengelompokkan data ke dalam $k$ cluster dengan meminimalkan variansi dalam cluster.  
 
 #### **Rumus Matematis**:  
 1. **Fungsi Objektif (Inertia)**:  
-$
+$$
 J = \sum_{i=1}^{k} \sum_{x \in C_i} ||x - \mu_i||^2
-$  
-- $ C_i $: Cluster ke-$ i $.  
-- $ \mu_i $: Pusat cluster (centroid) ke-$ i $.  
-- $ ||x - \mu_i|| $: Jarak Euclidean antara titik $ x $ dan centroid $ \mu_i $.  
+$$  
+- $C_i$: Cluster ke-$i$.  
+- $\mu_i$: Pusat cluster (centroid) ke-$i$.  
+- $||x - \mu_i||$: Jarak Euclidean antara titik $x$ dan centroid $\mu_i$.  
 
 2. **Jarak Euclidean**:  
-$
+$$
 d(x, \mu_i) = \sqrt{\sum_{j=1}^{n} (x_j - \mu_{ij})^2}
-$  
+$$  
 
 ---
 
@@ -62,12 +62,12 @@ $
 | C     | (10, 10)       |  
 | D     | (10, 11)       |  
 
-**Langkah 1: Inisialisasi Centroid** (Misal $ k=2 $):  
-- Centroid awal: $ \mu_1 = (1, 1) $, $ \mu_2 = (10, 10) $.  
+**Langkah 1: Inisialisasi Centroid** (Misal $k=2$):  
+- Centroid awal: $\mu_1 = (1, 1)$, $\mu_2 = (10, 10)$.  
 
 **Langkah 2: Hitung Jarak dan Kelompokkan**  
 - Hitung jarak setiap titik ke centroid:  
-  - $ d(A, \mu_1) = 0 $, $ d(A, \mu_2) = \sqrt{(1-10)^2 + (1-10)^2} \approx 12.73 $.  
+  - $d(A, \mu_1) = 0$, $d(A, \mu_2) = \sqrt{(1-10)^2 + (1-10)^2} \approx 12.73$.  
   - **Kesimpulan**: A masuk **Cluster 1**.  
   - Lakukan hal yang sama untuk titik B, C, D.  
 
@@ -76,8 +76,8 @@ $
 - Cluster 2: C, D  
 
 **Langkah 3: Update Centroid**  
-- $ $.  
-- $ $.  
+- Cluster 1: $(1, 1.5)$
+- Cluster 2: $(10, 10.5)$
 
 **Langkah 4: Ulangi hingga Konvergen**  
 Pada iterasi berikutnya, cluster tidak berubah lagi → **Algoritma berhenti**.  
@@ -85,7 +85,7 @@ Pada iterasi berikutnya, cluster tidak berubah lagi → **Algoritma berhenti**.
 ---
 
 ### **4. Langkah Kerja Algoritma K-Means**  
-1. **Pilih jumlah cluster $ k $** (bisa menggunakan Elbow Method).  
+1. **Pilih jumlah cluster $k$** (bisa menggunakan Elbow Method).  
 2. **Inisialisasi centroid** secara acak atau heuristic.  
 3. **Hitung jarak** semua titik data ke centroid.  
 4. **Kelompokkan titik** ke cluster terdekat.  
@@ -123,7 +123,7 @@ Bayangkan Anda ingin mengelompokkan **100 orang** di lapangan berdasarkan posisi
 
 ❌ **Kekurangan**:  
 - Sensitif terhadap inisialisasi centroid awal.  
-- Harus tentukan $ k $ sebelumnya.  
+- Harus tentukan $k$ sebelumnya.  
 - Tidak bekerja baik untuk cluster non-spherical atau berbeda ukuran.  
 
 **Solusi**:  
@@ -176,9 +176,9 @@ Bayangkan Anda meregangkan karet gelang. Awalnya mudah (penurunan inersia besar)
 ---
 
 ### **2. Rumus Inersia (Within-Cluster Sum of Squares/WCSS)**
-$
+$$
 \text{Inersia} = \sum_{i=1}^{k} \sum_{x \in C_i} ||x - \mu_i||^2
-$
+$$
 - $C_i$: Cluster ke-$i$.
 - $\mu_i$: Centroid cluster ke-$i$.
 - $||x - \mu_i||$: Jarak Euclidean titik ke centroid.
@@ -196,18 +196,18 @@ $
 
 **Langkah 1: Hitung Inersia untuk Berbagai $k$**  
 - **Kasus $k=1$**:
-  - Centroid: $ \mu = \left(\frac{1+1+10+10}{4}, \frac{1+2+10+11}{4}\right) = (5.5, 6) $
+  - Centroid: $\mu = (\frac{1+1+10+10}{4}, \frac{1+2+10+11}{4}) = (5.5, 6)$
   - Inersia:  
-    $
+    $$
     (1-5.5)^2 + (1-6)^2 + (1-5.5)^2 + (2-6)^2 + \dots \approx 120.5
-    $
+    $$
 
 - **Kasus $k=2$**:
-  - Centroid optimal: $ \mu_1 = (1, 1.5) $, $ \mu_2 = (10, 10.5) $
+  - Centroid optimal: $\mu_1 = (1, 1.5)$, $\mu_2 = (10, 10.5)$
   - Inersia:  
-    $
+    $$
     (1-1)^2 + (1-1.5)^2 + (1-1)^2 + (2-1.5)^2 + \dots = 1.0
-    $
+    $$
 
 - **Kasus $k=3$**:
   - Inersia turun sedikit (misal: 0.6).
