@@ -283,3 +283,5 @@ plt.show()
 - **Validasi Silang**: Gunakan metode lain sebagai pembanding.  
 
 Dengan Elbow Method, Anda bisa menghindari pemilihan $k$ yang sembarang dan meningkatkan kualitas clustering! 🎯
+
+---
